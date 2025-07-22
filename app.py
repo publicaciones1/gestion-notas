@@ -123,6 +123,10 @@ def export_excel():
     df.to_excel(file_path, index=False)
     return send_file(file_path, as_attachment=True)
 
+import os
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
 
