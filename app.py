@@ -6,8 +6,8 @@ from datetime import datetime
 app = Flask(__name__)
 app.secret_key = "supersecret"
 
-# Configuración DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///notas.db'
+# Configuración DB con PostgreSQL
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gestion_notas_db_user:xkynacbhfRBru4hOoKHbBVzV19NY98xi@dpg-d20euecmcj7s73b3j57g-a/gestion_notas_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
